@@ -103,13 +103,20 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small
-          version of the Firefox logo -->
+      <img src="./firefox-logo-only-120w.png" alt="firefox logo" />
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+        <iframe
+          width="400"
+          height="315"
+          src="https://www.youtube.com/embed/ojcNcvb1olg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -132,24 +139,66 @@
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img />
+          <img
+            srcset="
+              firefox-logo-only-120w.png 120w,
+              firefox-logo-only-400w.png 400w
+            "
+            sizes="(max-width: 500px) 120px,
+                  400px"
+            src="firefox-logo-only-400w.png"
+            alt="firefox logo"
+          />
         </a>
         <a href="https://www.mozilla.org/">
-          <img />
+          <img
+            srcset="
+              mozilla-dinosaur-head-120w.png 120w,
+              mozilla-dinosaur-head-400w.png 400w
+            "
+            sizes="(max-width: 500px) 120px,
+                  400px"
+            src="mozilla-dinosaur-head-400w.png"
+            alt="mozilla dinosaur head"
+          />
         </a>
         <a href="https://addons.mozilla.org/">
-          <img />
+          <img
+            srcset="firefox-addons-120w.jpg 120w, firefox-addons-400w.jpg 400w"
+            sizes="(max-width: 500px) 120px,
+                  400px"
+            src="firefox-addons-400w.jpg"
+            alt="firefox addons logo"
+          />
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img />
+          <img
+            srcset="
+              firefox-logo-only-120w.png 120w,
+              firefox-logo-only-400w.png 400w
+            "
+            sizes="(max-width: 500px) 120w,
+                  400px"
+            src="firefox-logo-only-400w.png"
+            alt="firefox logo"
+          />
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="red-panda-portrait-600w.jpg"
+          />
+          <source
+            media="min-width: 601px)"
+            srcset="red-panda-landscape-1200w"
+          />
+          <img src="red-panda-landscape-1200w.jpg" alt="red panda" />
+        </picture>
       </div>
     </main>
   </body>
